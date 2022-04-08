@@ -1,0 +1,30 @@
+@import './utility/normalize.scss';
+@import './utility/reset.scss';
+@import './utility/typography.scss';
+
+:root {
+    --primary-color: hsl(212, 21%, 88%);
+    --secoundry-color: hsl(212, 22%, 98%);
+    --red: hsl(352, 90%, 50%);
+    --blue: hsl(209, 100%, 50%);
+    --cyan: hsl(178, 87%, 65%);
+    --green: hsl(135, 100%, 40%);
+    --yellow: hsl(54, 100%, 50%);
+    @for $br from 1 through 10 {
+        --gray-#{$br}: hsl(0, 0%, #{$br}0%);
+    }
+    --text: var(--gray-1);
+    --box-shadow: 35px 35px 68px 0px rgba(218, 224, 231, 0.5),
+        inset -8px -8px 16px 0px rgba(218, 224, 231, 0.6),
+        inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+body {
+    background: var(--primary-color);
+    color: var(--text);
+}
+
+::selection {
+    background-color: var(--red);
+    color: #fff;
+}

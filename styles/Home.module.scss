@@ -1,0 +1,87 @@
+.container {
+    padding: 0 2rem;
+}
+
+.main {
+    min-height: calc(100vh - 8vh);
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    header {
+        font-size: clamp(1rem, 10vw, 1.5rem);
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+    .card {
+        &,
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        width: clamp(200px, 90%, 500px);
+        height: 350px;
+        padding: 1.5rem;
+        border-radius: 26px;
+        box-shadow: var(--box-shadow);
+        form {
+            width: 100%;
+            .input {
+                display: inline-block;
+                position: relative;
+                width: clamp(150px, 100%, 350px);
+                margin: 0 auto 1em;
+                border-radius: 0;
+                border-width: 0 0 1px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0%;
+                    height: 2px;
+                    width: 10px;
+                    visibility: hidden;
+                    background-color: var(--blue);
+                    transition: 0.3s ease all;
+                }
+                &:focus-within::after {
+                    visibility: visible;
+                    width: 100%;
+                }
+                input {
+                    width: 100%;
+                    padding: 0.7em;
+                    box-sizing: border-box;
+                    font-weight: 500;
+
+                    background: transparent;
+                    outline: none;
+                    border: 0;
+                    color: var(--text);
+                    border-bottom: 1px solid #525252;
+                }
+            }
+            .error {
+                margin: 0.5em 0;
+                font-size: clamp(0.8rem, 2vw, 1rem);
+            }
+            button[type='submit'] {
+                margin-top: 1rem;
+                padding: 0.5rem;
+                width: clamp(100px, 90%, 250px);
+                border: 1px solid var(--blue);
+                border-radius: 1em;
+                transition: 300ms ease-in-out;
+                &:hover {
+                    background: var(--blue);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
