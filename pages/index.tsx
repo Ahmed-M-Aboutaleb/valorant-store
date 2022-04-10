@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 
 import styles from '../styles/Home.module.scss';
+import Head from 'next/head';
 
 export default function Home() {
     interface formValues {
