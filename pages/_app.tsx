@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { Toaster } from 'react-hot-toast';
 import Footer from '../components/footer';
 import '../styles/globals.scss';
@@ -8,7 +9,11 @@ function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
             <Footer />
             <Toaster />
-            <script
+            <Script
+                strategy='beforeInteractive'
+                onError={(e) => {
+                    console.error('Script failed to load', e);
+                }}
                 data-name='BMC-Widget'
                 async
                 data-cfasync='false'
@@ -20,7 +25,7 @@ function MyApp({ Component, pageProps }) {
                 data-position='Right'
                 data-x_margin='18'
                 data-y_margin='18'
-            ></script>
+            ></Script>
         </>
     );
 }
