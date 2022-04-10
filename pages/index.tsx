@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 
 import styles from '../styles/Home.module.scss';
-import Head from 'next/head';
+import Script from 'next/script';
 
 export default function Home() {
     interface formValues {
@@ -46,13 +46,6 @@ export default function Home() {
     };
     return (
         <div className={styles.container}>
-            <Head>
-                <script
-                    async
-                    src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4638221760277043'
-                    crossOrigin='anonymous'
-                ></script>
-            </Head>
             <main className={styles.main}>
                 <header>
                     <h1>WELCOME BACK 👋</h1>
@@ -167,6 +160,12 @@ export default function Home() {
                     </Formik>
                 </div>
             </main>
+
+            <Script
+                async
+                src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4638221760277043'
+                crossOrigin='anonymous'
+            ></Script>
         </div>
     );
 }
