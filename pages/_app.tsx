@@ -9,23 +9,6 @@ function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
             <Footer />
             <Toaster />
-            <Script
-                strategy='beforeInteractive'
-                onError={(e) => {
-                    console.error('Script failed to load', e);
-                }}
-                data-name='BMC-Widget'
-                async
-                data-cfasync='false'
-                src='https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js'
-                data-id='iifire'
-                data-description='Support me on Buy me a coffee!'
-                data-message='You liked the website?You can buy me a coffee 😎'
-                data-color='#5F7FFF'
-                data-position='Right'
-                data-x_margin='18'
-                data-y_margin='18'
-            ></Script>
         </>
     );
 }
