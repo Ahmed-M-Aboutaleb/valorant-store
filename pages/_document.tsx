@@ -15,6 +15,7 @@ class MyDocument extends Document {
     render() {
         return (
             <Html lang='en'>
+                <Head />
                 <body data-what-you-are-looking-at='👀'>
                     <Main />
                     <NextScript />
