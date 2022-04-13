@@ -16,7 +16,7 @@ class MyDocument extends Document {
         return (
             <Html lang='en'>
                 <Head />
-                <body data-what-you-are-looking-at='👀'>
+                <body data-what-are-you-looking-at='👀'>
                     <Main />
                     <NextScript />
                 </body>
