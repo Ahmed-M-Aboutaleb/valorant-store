@@ -1,0 +1,30 @@
+{
+    "name": "Valorant Store",
+    "short_name": "Valo Store",
+    "description": "From now you don't need to open Valorant to see the store just check it from here 😎",
+    "background_color": "#dae0e7",
+    "theme_color": "#dae0e7",
+    "dir": "ltr",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/icons/192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
