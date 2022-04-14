@@ -1,6 +1,6 @@
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 
-import CodeForm from '../components/CodeForm';
 import LoginForm from '../components/LoginForm';
 
 import styles from '../styles/Home.module.scss';
@@ -8,6 +8,7 @@ import styles from '../styles/Home.module.scss';
 export default function Home({ dispatch }) {
     const [popup, setPopup] = useState(false);
     const [cookies, setCookies] = useState('');
+    const CodeForm = dynamic(() => import('../components/CodeForm'));
 
     return (
         <div className={styles.container}>
